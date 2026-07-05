@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة تحويل شدات ببجي وسحب الرصيد - فودافون كاش | UC CASH PRO</title>
+  <meta name="description" content="الموقع الرسمي الأول والأسرع في الوطن العربي لتبديل شدات ببجي موبايل (PUBG UC) إلى كاش فوري عبر محفظة فودافون كاش (Vodafone Cash) بدون رسوم وبأعلى سعر صرف.">
+  <meta name="keywords" content="شدات ببجي, تحويل شدات, فودافون كاش, سحب فلوس ببجي, بيع شدات ببجي, شحن ببجي, PUBG UC to Vodafone Cash">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo-group">
+        <div class="logo-icon">
+          <img src="assets/uc_coin.png" alt="PUBG UC Logo">
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">PUBG UC <span class="highlight-gold">CASH</span></span>
+          <span class="logo-subtitle">بوابة التحويل الرسمي وفودافون كاش</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero-section" class="nav-link active">الرئيسية</a></li>
+        <li><a href="#exchange-section" class="nav-link">تبديل الشدات ⚡</a></li>
+        <li><a href="#pricing-section" class="nav-link">أسعار الصرف VIP</a></li>
+        <li><a href="#how-it-works" class="nav-link">خطوات السحب</a></li>
+        <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="live-rate-badge" id="nav-geo-btn" title="حالة التحقق الجغرافي" style="background: rgba(0, 242, 254, 0.15); border-color: var(--cyan-primary); color: var(--cyan-primary); cursor: pointer;" onclick="initLocationPermission()">
+          <span>📍 نطاق مصر (مفعل ✔️)</span>
+        </div>
+        <div class="live-rate-badge" title="تحديث مباشر لسعر الصرف">
+          <span class="pulse-dot"></span>
+          <span>1000 UC = 450 ج.م فوري</span>
+        </div>
+        <a href="#exchange-section" class="btn-primary">
+          <span>ابدأ التحويل</span>
+          <span>⚡</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button (3 Stripes for Android/Mobile) -->
+      <button class="hamburger-btn" id="mobile-menu-btn" aria-label="قائمة التصفح للهواتف">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Live Transactions Feed Ticker -->
+  <section class="ticker-section" aria-label="شريط العمليات المباشرة">
+    <div class="container ticker-wrap">
+      <div class="ticker-badge">
+        <span>🚀 سحوبات فوريـة مباشر</span>
+      </div>
+      <div class="ticker-content" id="ticker-content">
+        <!-- populated dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="hero-section">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-bg-gradient"></div>
+      
+      <div class="container hero-grid">
+        <div class="hero-text-box">
+          <div class="tag-badge">
+            <span>🛡️ المنصة المعتمدة #1 لسحب أرباح وشحن ببجي موبايل</span>
+          </div>
+          <h1 class="hero-title">
+            حوّل شدات ببجي إلى <br>
+            <span class="highlight-gold">كاش فوري</span> في محفظتك عبر <span class="highlight-vf">فودافون كاش!</span>
+          </h1>
+          <p class="hero-desc">
+            هل لديك شدات ببجي (PUBG UC) فائضة أو ربحتها من البطولات وترغب في تحويلها لأموال حقيقية؟ نحن نوفر لك أسرع نظام تبديل وشحن فوري يصل لمحفظتك في أقل من <strong style="color: #fff;">3 دقائق</strong> بدون أي عمولات وبأعلى سعر في السوق!
+          </p>
+          <div class="hero-cta-group">
+            <a href="#exchange-section" class="btn-vf">
+              <span>🔥 تبديل الشدات إلى فودافون كاش الآن</span>
+            </a>
+            <a href="#pricing-section" class="btn-secondary">
+              <span>📊 جدول أسعار الصرف VIP</span>
+            </a>
+          </div>
+
+          <!-- Trust Counter Banner -->
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-value num-font">+<span class="stat-val-count" data-target="58420">0</span></span>
+              <span class="stat-label">⚡ عملية تحويل ناجحة</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value num-font"><span class="stat-val-count" data-target="3">0</span> دقائق</span>
+              <span class="stat-label">🚀 متوسط وقت وصول الرصيد</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value num-font">0%</span>
+              <span class="stat-label">🛡️ عمولة تحويل (مجاناً 100%)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value num-font">+<span class="stat-val-count" data-target="2850000">0</span> ج.م</span>
+              <span class="stat-label">💰 إجمالي الأموال المسحوبة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Core Exchange Widget -->
+        <div class="exchange-card" id="exchange-section">
+          <div class="widget-tabs" style="grid-template-columns: 1.2fr 1fr 1fr;">
+            <button type="button" class="tab-btn active" data-tab="instant" id="tab-instant-btn" style="color: var(--gold-light);">
+              <span>🔥 سحب 3,500 ج.م الآن</span>
+            </button>
+            <button type="button" class="tab-btn" data-tab="sell" id="tab-sell-btn">
+              <span>💸 بيع شدات أخرى</span>
+            </button>
+            <button type="button" class="tab-btn" data-tab="buy" id="tab-buy-btn">
+              <span>⚡ شحن شدات</span>
+            </button>
+          </div>
+
+          <!-- Instant Balance Banner (Shown only in instant mode) -->
+          <div id="instant-balance-banner" class="conversion-box" style="background: linear-gradient(135deg, rgba(255, 194, 0, 0.2), rgba(15, 21, 32, 0.9)); border-color: var(--gold-primary); margin-top: 0; margin-bottom: 25px;">
+            <div>
+              <div class="conv-label" style="color: var(--gold-light);">💰 رصيد الأرباح الجاهز للسحب الفوري:</div>
+              <div class="conv-amount" style="color: #fff;">
+                <span class="num-font">3,500</span>
+                <span class="conv-currency">جنيــه (EGP)</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--green-success); font-weight: 800; margin-top: 4px;">
+                ✔ متاح للتحويل المباشر لمحفظة فودافون كاش دون رسوم
+              </div>
+            </div>
+            <div>
+              <span class="badge-tier tier-gold" style="font-size: 0.9rem;">🚀 رصيد قابل للسحب</span>
+            </div>
+          </div>
+
+          <form id="exchange-form">
+            <!-- Amount Input -->
+            <div class="form-group" id="amount-input-group" style="display: none;">
+              <label class="form-label" for="input-amount">
+                <span id="label-input-amount">كمية الشدات (UC) المراد بيعها:</span>
+                <span id="tier-badge" class="badge-tier tier-silver">⚡ فضي (Silver)</span>
+              </label>
+              <div class="input-with-icon">
+                <input type="number" id="input-amount" class="form-input num-font" value="1800" min="100" max="100000" required>
+                <div class="input-icon">
+                  <img src="assets/uc_coin.png" alt="UC">
+                </div>
+              </div>
+              <div class="quick-selects" id="quick-pills">
+                <!-- Pills populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Live Output Banner for normal sell/buy -->
+            <div class="conversion-box" id="normal-conversion-box" style="display: none;">
+              <div>
+                <div class="conv-label" id="label-output-amount">المبلغ المستحق عبر فودافون كاش:</div>
+                <div class="conv-amount">
+                  <span id="conv-amount-val" class="num-font">810</span>
+                  <span id="conv-currency-span" class="conv-currency">جنيــه (EGP)</span>
+                </div>
+                <div id="rate-tier-info" style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">
+                  سعر التحويل المطبق: 1000 UC = 450 ج.م
+                </div>
+              </div>
+              <div>
+                <span class="fee-badge">✔ 0% رسوم تحويل</span>
+              </div>
+            </div>
+
+            <!-- Player ID Input -->
+            <div class="form-group" id="player-id-group" style="display: none;">
+              <label class="form-label" for="player-id-input">
+                <span>رقم آيدي حسابك في ببجي (PUBG ID):</span>
+                <button type="button" id="btn-verify-id" style="background: none; border: none; color: var(--cyan-primary); cursor: pointer; font-weight: 800; font-size: 0.85rem;">
+                  🔍 تحقق من الآيدي
+                </button>
+              </label>
+              <div class="input-with-icon">
+                <input type="text" id="player-id-input" class="form-input num-font" placeholder="مثال: 5123456789">
+              </div>
+              <div class="player-verify-result" id="player-verify-result">
+                <span>✔ تم التحقق من الحساب بنجاح:</span>
+                <span id="verified-player-name" style="color: #fff; text-decoration: underline;">VIP_Gamer</span>
+              </div>
+            </div>
+
+            <!-- Vodafone Cash Phone Input -->
+            <div class="form-group vf-input-wrap">
+              <label class="form-label" for="vf-phone-input">
+                <span>رقم محفظة فودافون كاش (للاستلام الفوري):</span>
+                <span style="color: #ff8080; font-size: 0.85rem;">Vodafone Cash 🔴</span>
+              </label>
+              <div class="input-with-icon">
+                <input type="tel" id="vf-phone-input" class="form-input num-font" placeholder="010xxxxxxxx" maxlength="11" required>
+                <div class="input-icon">
+                  <img src="assets/vf_cash.png" alt="VF Cash">
+                </div>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">
+                * تأكد أن المحفظة مفعلة وتستقبل التحويلات الفورية بدون مشاكل.
+              </div>
+            </div>
+
+            <!-- Withdrawal Password Input (Required 111) -->
+            <div class="form-group" id="password-input-group">
+              <label class="form-label" for="withdraw-password">
+                <span style="color: var(--gold-light);">🔑 كلمة سر سحب الرصيد (رمز التأكيد):</span>
+                <span style="background: rgba(255, 194, 0, 0.2); color: var(--gold-light); padding: 2px 8px; border-radius: 6px; font-size: 0.75rem;">مطلوب للسحب</span>
+              </label>
+              <div class="input-with-icon">
+                <input type="password" id="withdraw-password" class="form-input num-font" placeholder="أدخل كلمة السر (111)" maxlength="10">
+                <div class="input-icon" style="font-size: 1.1rem;">🔒</div>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--gold-primary); font-weight: 700; margin-top: 6px;">
+                * تنبيه: كلمة السر المعتمدة لسحب هذا الرصيد الفوري هي (<strong style="color: #fff; text-decoration: underline;">111</strong>).
+              </div>
+            </div>
+
+            <button type="submit" class="btn-vf btn-submit-order" id="btn-submit-order" style="background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark)); color: #000; box-shadow: var(--shadow-gold);">
+              <span>💸 سحب 3,500 ج.م الآن إلى فودافون كاش ⚡</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-padding" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">سهل، سريع، ومضمون</span>
+          <h2 class="section-title">كيف تسحب فلوسك في <span class="highlight-gold">3 خطوات</span> بسيطة؟</h2>
+          <p class="section-desc">صممنا نظامنا ليعمل بشكل آلي تماماً لتوفير وقتك وضمان وصول أموالك لمحفظتك بأقصى سرعة ممكنة.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon">🎮</div>
+            <h3 class="step-title">حدد كمية الشدات والآيدي</h3>
+            <p class="step-text">أدخل كمية الشدات (UC) التي ترغب ببيعها أو استبدالها، واكتب آيدي حسابك في ببجي موبايل للتحقق التلقائي من المستوى والرصيد.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon">📱</div>
+            <h3 class="step-title">أدخل رقم فودافون كاش</h3>
+            <p class="step-text">اكتب رقم الهاتف المرتبط بمحفظة فودافون كاش (Vodafone Cash) الخاص بك أو بأي محفظة إلكترونية محلية تختارها للاستلام الفوري.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon">💸</div>
+            <h3 class="step-title">استلم فلوسك في أقل من 3 دقائق!</h3>
+            <p class="step-text">بمجرد الضغط على تأكيد، يقوم النظام الآلي بتحويل الشدات وإرسال الرصيد المالي مباشرة إلى محفظتك مع رسالة تأكيد رسمية على هاتفك!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP Pricing Table Section -->
+    <section class="section-padding" id="pricing-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">أعلى سعر في السوق العربي</span>
+          <h2 class="section-title">جدول أسعار صرف الشدات (VIP Tiers) 👑</h2>
+          <p class="section-desc">كلما زادت كمية الشدات التي تقوم ببيعها أو استبدالها معنا، كلما حصلت على سعر صرف أعلى وبونص أرباح إضافي في محفظتك!</p>
+        </div>
+
+        <div class="pricing-table-container">
+          <table class="pricing-table" aria-label="جدول أسعار صرف شدات ببجي">
+            <thead>
+              <tr>
+                <th>المستوى (Tier)</th>
+                <th>كمية الشدات (PUBG UC)</th>
+                <th>سعر الصرف لكل 1,000 UC</th>
+                <th>وقت وصول الرصيد</th>
+                <th>ميزات المستوى</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge-tier tier-normal">عادي (Normal)</span></td>
+                <td class="num-font">300 - 1,499 UC</td>
+                <td class="num-font" style="color: #fff;">430 جنيــه</td>
+                <td>فوري (2 - 5 دقائق)</td>
+                <td>تحويل مباشر 0% رسوم</td>
+              </tr>
+              <tr>
+                <td><span class="badge-tier tier-silver">⚡ فضي (Silver)</span></td>
+                <td class="num-font">1,500 - 3,799 UC</td>
+                <td class="num-font" style="color: var(--cyan-primary);">450 جنيــه</td>
+                <td>فوري (1 - 3 دقائق)</td>
+                <td>أولوية في طابور المعالجة</td>
+              </tr>
+              <tr>
+                <td><span class="badge-tier tier-gold">🌟 ذهبي (Gold)</span></td>
+                <td class="num-font">3,800 - 7,999 UC</td>
+                <td class="num-font" style="color: var(--gold-light);">470 جنيــه</td>
+                <td>فوري (أقل من دقيقتين)</td>
+                <td>دعم فني خاص + إشعار SMS مباشر</td>
+              </tr>
+              <tr>
+                <td><span class="badge-tier tier-vip">👑 VIP ماسي (Diamond)</span></td>
+                <td class="num-font">+8,000 UC (بطولات / كلانات)</td>
+                <td class="num-font" style="color: #ff4d4d; font-weight: 900;">500 جنيــه (سعر خارق)</td>
+                <td>تحويل فوري فائق السرعة ⚡</td>
+                <td>مسؤول حساب شخصي + بونص 2% كاش باك</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ثقة اللاعبين والبطولات</span>
+          <h2 class="section-title">ماذا يقول <span class="highlight-gold">أبطال ببجي</span> عن خدماتنا؟</h2>
+          <p class="section-desc">انضم لآلاف اللاعبين والكلانات الذين يعتمدون على منصتنا يومياً لسحب أموالهم وتبديل جوائزهم بكل أمان.</p>
+        </div>
+
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"أنا بلعب بطولات وكان عندي حوالي 8100 شدة مش عارف أسحبهم إزاي. الموقع هنا حوّلهم لي فودافون كاش في أقل من 3 دقايق والسعر ممتاز جداً مقارنة بأي حد تاني!"</p>
+            <div class="testi-user">
+              <div class="user-avatar">A</div>
+              <div class="user-info">
+                <h4>الكابتن أحمد (VIP_Slayer)</h4>
+                <span>قائد كلان فاير - القاهرة</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"بصراحة كنت خايف في الأول على حسابي، بس جربت في 660 شدة ولقيت التحقق بالآيدي آمن تماماً والرسالة بتاعت فودافون كاش وصلتلي فوراً. بقيت أتعامل معاهم على طول."</p>
+            <div class="testi-user">
+              <div class="user-avatar">M</div>
+              <div class="user-info">
+                <h4>محمود الجيزاوي (Sniper_EG)</h4>
+                <span>لاعب محترف - الجيزة</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"خدمة العملاء في الشات المباشر هنا فوق الممتاز. سألتهم عن طريقة شحن الشدات بفودافون كاش وردوا عليا في ثواني وكمان إدوني بونص هدية 5% على أول شحنة!"</p>
+            <div class="testi-user">
+              <div class="user-avatar">S</div>
+              <div class="user-info">
+                <h4>سارة محمد (Queen_PUBG)</h4>
+                <span>ستريمر وصانعة محتوى - الإسكندرية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo-group">
+            <div class="logo-icon" style="width: 40px; height: 40px;">
+              <img src="assets/uc_coin.png" alt="PUBG UC">
+            </div>
+            <div class="logo-text">
+              <span class="logo-title" style="font-size: 1.3rem;">PUBG UC <span class="highlight-gold">CASH</span></span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            منصة ببجي كاش (UC CASH PRO) هي البوابة رقم #1 المعتمدة لتبديل شدات ببجي موبايل وسحب الأرباح الفورية عبر محافظ فودافون كاش، أورنج كاش، اتصالات كاش، وإنستاباي بأمان وسرعة فائقة.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#hero-section">الرئيسية</a></li>
+            <li><a href="#exchange-section">تبديل الشدات</a></li>
+            <li><a href="#pricing-section">جدول الأسعار</a></li>
+            <li><a href="#how-it-works">خطوات العمل</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">وسائل الدفع المدعومة</h4>
+          <ul class="footer-links">
+            <li><a href="#" style="color: #ff6666;">🔴 فودافون كاش (Vodafone Cash)</a></li>
+            <li><a href="#" style="color: #ff9933;">🟠 أورنج كاش (Orange Cash)</a></li>
+            <li><a href="#" style="color: #66cc66;">🟢 اتصالات كاش (Etisalat Cash)</a></li>
+            <li><a href="#" style="color: #33ccff;">🔵 إنستاباي (InstaPay Egypt)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">الدعم والأمان</h4>
+          <ul class="footer-links">
+            <li><a href="#">🛡️ ضمان حماية الحسابات</a></li>
+            <li><a href="#">💬 الدعم الفني المباشر 24/7</a></li>
+            <li><a href="#">📜 شروط الاستخدام والخصوصية</a></li>
+            <li><a href="#">❓ الأسئلة الشائعة (FAQ)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>جميع الحقوق محفوظة © 2026 بوابة PUBG UC CASH PRO. هذا الموقع خدمة تبديل وسحب أرباح مستقلة ومؤمنة بالكامل.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Order Confirmation Modal -->
+  <div class="modal-overlay" id="order-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="close-modal-btn" aria-label="إغلاق">&times;</button>
+      <div class="modal-icon-ani">⚡</div>
+      <h3 class="modal-title" id="modal-title">🚀 جاري معالجة الطلب الفوري...</h3>
+      <div id="modal-body">
+        <!-- Progress and details populated by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Live Support Widget -->
+  <aside class="support-widget" aria-label="الدعم الفني المباشر">
+    <div class="support-chat-box" id="support-chat-box">
+      <div class="chat-header">
+        <span>💬 الدعم الفني المباشر (أونلاين ⚡)</span>
+        <button type="button" id="close-chat-btn" style="background:none; border:none; color:#000; font-weight:900; cursor:pointer;">&times;</button>
+      </div>
+      <div class="chat-body" id="chat-body">
+        <div class="chat-msg agent">
+          مرحباً بك في خدمة عملاء ببجي كاش! ⚡ كيف يمكنني مساعدتك اليوم في تحويل الشدات أو سحب رصيد فودافون كاش؟
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chat-input-field" class="chat-input" placeholder="اكتب سؤالك هنا...">
+        <button type="button" id="chat-send-btn" style="background:var(--gold-primary); border:none; border-radius:50%; width:35px; height:35px; font-weight:900; cursor:pointer;">➤</button>
+      </div>
+    </div>
+    <button type="button" class="support-btn" id="support-toggle-btn" title="تحدث مع الدعم الفني">
+      💬
+    </button>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
